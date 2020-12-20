@@ -54,31 +54,21 @@ $(function(){
             $(this).find('#js-answer').addClass('.active');            
         }
     });
+    // //slick
+    // $('.slick').slick({
+    // });
+    $('.slick').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots:true,
 
-    // swiper
-    var mySwiper = new Swiper('.swiper-container', {
-        spaceBetween: 60,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 50,
-        slidesPerView: 1,
-        breakpoints: {
-            // 768px以上の場合
-            768: {
-                slidesPerView: 3,
-                
-                
+        responsive: [{
+            breakpoint: 768,  //ブレイクポイントを指定
+            settings: {
+                slidesToShow: 1,
             },
-        },
-        autoplay: {
-            delay: 3000,
-            stopOnLastSlide: false,
-            disableOnInteraction: false,
-            reverseDirection: false
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        }
+        }]
     });
 });
